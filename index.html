@@ -1,0 +1,131 @@
+<!-- 
+    Układ 16:9
+    Ma być podobny (nie pixel w pixel)
+    Ma być responsywny (dostosowoywać się do wysokości przeglądarki)
+
+    ZŁOTE ZASADY
+    - Zrób tak jak potrafisz i tyle ile potrafisz
+    - Próbuj/testuj/sprawdzaj co by było. Takie próbowanie to najważniejsze cechy programisty
+    - Nie przeskakuj ćwiczenia. 
+ -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A dream about old Japan</title>
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <style>
+        html {
+            --pictureWidth: 60vw;
+            --pictureHeight: calc(var(--pictureWidth) * 9 / 16);
+        }
+
+        .picture {
+            position: relative;
+            width: var(--pictureWidth);
+            height: var(--pictureHeight);
+            margin: calc((100vh - var(--pictureHeight)) / 2) auto;
+            overflow: hidden;
+            background-color: rgb(199, 189, 174);
+        }
+
+        .picture img,
+        .picture p {
+            position: absolute;
+        }
+
+        .picture img:nth-of-type(1),
+        .picture img:nth-of-type(2),
+        .picture img:nth-of-type(3),
+        .picture img:nth-of-type(4),
+        .picture img:nth-of-type(5),
+        .picture img:nth-of-type(6) {
+            width: 100%;
+        }
+
+        .picture img:nth-of-type(6) {
+            bottom: calc(var(--pictureHeight) * -0.65);
+        }
+
+        .picture img:nth-of-type(5) {
+            bottom: calc(var(--pictureHeight) * -0.4);
+        }
+
+        .picture img:nth-of-type(4) {
+            bottom: calc(var(--pictureHeight) * -0.3);
+        }
+
+        .picture img:nth-of-type(3) {
+            bottom: calc(var(--pictureHeight) * -0.32);
+        }
+
+        .picture img:nth-of-type(2) {
+            bottom: calc(var(--pictureHeight) * -0.22);
+        }
+
+        .picture img:nth-of-type(1) {
+            top: calc(var(--pictureHeight) * .1);
+        }
+
+        .picture img:nth-of-type(7) {
+            height: calc(var(--pictureHeight) * .18);
+            top: calc(var(--pictureHeight) * .04);
+            left: calc(var(--pictureWidth) * .07);
+        }
+
+        .picture img:nth-of-type(8) {
+            width: calc(var(--pictureWidth) * .33);
+            top: calc(var(--pictureHeight) * 0.1);
+            left: calc(var(--pictureWidth) * -0.08);
+        }
+
+        .picture img:nth-of-type(9) {
+            width: calc(var(--pictureWidth) * .45);
+            top: calc(var(--pictureHeight) * 0.1);
+            right: 0;
+        }
+
+        .picture img:nth-of-type(10) {
+            width: calc(var(--pictureWidth) * .37);
+            top: calc(var(--pictureHeight) * 0.15);
+            right: 0;
+        }
+
+        .picture img:nth-of-type(11) {
+            height: calc(var(--pictureHeight) * .3);
+            top: calc(var(--pictureHeight) * 0.55);
+            left: calc(var(--pictureWidth) * .08);
+        }
+
+        .picture p {
+            top: calc(var(--pictureHeight) * 0.81);
+            right: calc(var(--pictureWidth) * .03);
+            font-family: 'Cookie', cursive;
+            font-size: 2em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <!-- img[src=img/japan$.png]*11 -->
+        <img src="img/japan1.png" alt="">
+        <img src="img/japan2.png" alt="">
+        <img src="img/japan3.png" alt="">
+        <img src="img/japan4.png" alt="">
+        <img src="img/japan5.png" alt="">
+        <img src="img/japan6.png" alt="">
+        <img src="img/japan7.png" alt="">
+        <img src="img/japan8.png" alt="">
+        <img src="img/japan9.png" alt="">
+        <img src="img/japan10.png" alt="">
+        <img src="img/japan11.png" alt="">
+        <p>&copy; Joanna Stiller</p>
+    </div>
+</body>
+
+</html>
